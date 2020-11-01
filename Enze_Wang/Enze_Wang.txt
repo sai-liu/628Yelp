@@ -1,1 +1,10 @@
 This is code from Enze Wang
+
+Use this command to submit:
+
+git add Enze Wang
+git commit -m "Enze Wang 1031"
+git push
+
+Use this command to pull:
+
