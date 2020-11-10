@@ -22,8 +22,8 @@ ReviewWordMatrix <- yelp_text_tbl_words %>% cast_dtm(uniqueID, word, n)
 R1=as.matrix(ReviewWordMatrix)
 dim(R1)
 ss1=apply(R1,2,sum)
-R1=R1[,-which(ss1<100)]
-
+R1=R1[,-which(ss1<20)]
+dim(R1)
 
 
 yelp_text_tbl <- tbl_df(data.frame(uniqueID = 20001:40000,reviews[20001:40000,]))
@@ -34,8 +34,8 @@ ReviewWordMatrix <- yelp_text_tbl_words %>% cast_dtm(uniqueID, word, n)
 R2=as.matrix(ReviewWordMatrix)
 dim(R2)
 ss2=apply(R2,2,sum)
-R2=R2[,-which(ss2<100)]
-
+R2=R2[,-which(ss2<20)]
+dim(R2)
 
 
 yelp_text_tbl <- tbl_df(data.frame(uniqueID = 40001:67152,reviews[40001:67152,]))
@@ -46,11 +46,13 @@ ReviewWordMatrix <- yelp_text_tbl_words %>% cast_dtm(uniqueID, word, n)
 R3=as.matrix(ReviewWordMatrix)
 dim(R3)
 ss3=apply(R3,2,sum)
-R3=R3[,-which(ss3<100)]
+R3=R3[,-which(ss3<20)]
+dim(R3)
+
 
 save(R1,file="R1.Rdata")
-save(R2,file="R1.Rdata")
-save(R3,file="R1.Rdata")
+save(R2,file="R2.Rdata")
+save(R3,file="R3.Rdata")
 
 names1=colnames(R1)
 names2=colnames(R2)
@@ -92,7 +94,7 @@ y=cbind(stars=reviews$stars,rbind(r1,r2.co,r3.co))
 save(y,file="y.Rdata")
 
 #### Modeling
-gb <- xgboost(data = as.matrix(y[,-1]),
+gb <- xgboost(data = as.matrix(y[,-1]), ##linear model
               label = y[,1], 
               booster="gblinear",
               nround=200,
@@ -100,5 +102,17 @@ gb <- xgboost(data = as.matrix(y[,-1]),
               
 )
 importance_matrix <- xgb.importance(variables, model =gb)
-xgb.ggplot.importance(importance_matrix,top_n=20)
+xgb.ggplot.importance(importance_matrix,top_n=100)
 
+gb_tree <- xgboost(data = as.matrix(y[,-1]), ##tree model
+              label = y[,1], 
+              booster="gbtree",
+              nround=50,
+              eval_metric = "rmse",
+              eta=0.2,
+              maxdepth=10
+              
+)
+
+importance_matrix <- xgb.importance(variables, model =gb_tree)
+xgb.ggplot.importance(importance_matrix,top_n=30)
