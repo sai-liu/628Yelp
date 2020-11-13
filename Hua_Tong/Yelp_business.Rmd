@@ -1,0 +1,201 @@
+---
+title: "Yelp_business"
+author: "Hua Tong"
+date: "2020/11/12"
+output: html_document
+---
+
+Data preprocessing:
+
+```{r}
+#Import data
+setwd('D:/fall semester/628/Yelp/data/')
+bus=read.csv("pizza_business.csv")
+#Remove unnecessary variables
+bus=bus[,-c(1,2,3,4,6,7,10,26:32)]
+#Explore the data
+head(bus)
+tail(bus)
+summary(bus)
+hist(bus$stars)
+
+attach(bus)
+```
+
+Searching for factors that affect the stars:
+
+```{r}
+#City
+sum(city=='')
+aggregate(stars,list(Cities=city),mean)
+anova(lm(stars~city))
+```
+
+The mean ratings of pizza restaurants in different cities are not equal. The area with lowest and highest ratings are Urbana-Champaign (3.19 stars) and Pittsburgh (3.43 stars).
+
+```{r}
+#Alcohol
+sum(Alcohol=='')
+value=which(Alcohol!='')
+aggregate(stars[value],list(Alcohol=Alcohol[value]),mean)
+anova(lm(stars[value]~Alcohol[value]))
+t.test(stars[Alcohol=='beer_and_wine'],stars[Alcohol=='full_bar'])
+t.test(stars[Alcohol=='beer_and_wine'],stars[Alcohol=='None'])
+t.test(stars[Alcohol=='None'],stars[Alcohol=='full_bar'])
+t.test(stars[Alcohol=='None'],stars[Alcohol=='full_bar'|Alcohol=='beer_and_wine'])
+```
+
+**(Suggestion)** The ANOVA table shows that the provision of alcohol could affect the ratings. There is no significant difference between offering 'beer and wine' and 'full bar'. But the restaurants that do not provide alcohol receive lower ratings (averaging -0.17 stars) than others.
+
+```{r}
+#Bikeparking
+sum(BikeParking=='')
+value=which(BikeParking!='')
+aggregate(stars[value],list(BikeParking=BikeParking[value]),mean)
+t.test(stars[BikeParking=='True'],stars[BikeParking=='False'])
+```
+
+**(Suggestion)** The restaurants with bike-parking areas are expected to receive ratings 0.19 stars higher than others.
+
+```{r}
+#Credit cards
+sum(BusinessAcceptsCreditCards=='')
+value=which(BusinessAcceptsCreditCards!='')
+aggregate(stars[value],list(CreditCard=BusinessAcceptsCreditCards[value]),mean)
+t.test(stars[BusinessAcceptsCreditCards=='True'],stars[BusinessAcceptsCreditCards=='False'])
+```
+
+The result shows that the mean rating of restaurants that accept credit cards is lower than others. But considering that the percentage of restaurants that do not accept credit cards is quite low (about 4%), there may be some special situations that influence the result.
+
+```{r}
+#Caters
+sum(Caters=='')
+value=which(Caters!='')
+aggregate(stars[value],list(Caters=Caters[value]),mean)
+t.test(stars[Caters=='True'],stars[Caters=='False'])
+```
+
+What's caters?
+
+```{r}
+#Kids
+sum(GoodForKids=='')
+value=which(GoodForKids!='')
+aggregate(stars[value],list(Kids=GoodForKids[value]),mean)
+t.test(stars[GoodForKids=='True'],stars[GoodForKids=='False'])
+```
+
+**(Suggestion)** Providing facilities for kids are expected to increase the average rating by 0.23 stars. It seems that people like eating pizza with their kids, so we suggest that restaurants could prepare something like child seats, toys, or pizza for children, if possible.
+
+```{r}
+#TV
+sum(HasTV=='')
+value=which(HasTV!='')
+aggregate(stars[value],list(TV=HasTV[value]),mean)
+t.test(stars[HasTV=='True'],stars[HasTV=='False'])
+```
+
+Given the p-value of 0.099, having TVs do not significantly affect the restaurant ratings ($\alpha$=0.05).
+
+```{r}
+#Noise
+sum(NoiseLevel=='')
+value=which(NoiseLevel!='')
+aggregate(stars[value],list(Noise=NoiseLevel[value]),mean)
+anova(lm(stars[value]~NoiseLevel[value]))
+t.test(stars[NoiseLevel=='quiet'],stars[NoiseLevel=='average'])
+t.test(stars[NoiseLevel=='average'],stars[NoiseLevel=='loud'])
+t.test(stars[NoiseLevel=='loud'],stars[NoiseLevel=='very_loud'])
+t.test(stars[NoiseLevel=='average'|NoiseLevel=='quiet'],stars[NoiseLevel=='loud'|NoiseLevel=='very_loud'])
+```
+
+**(Suggestion)** From the results of ANOVA and T-tests, we find that the rating of restaurant would decrease if the noise is above 'loud' level. The average rating of 'loud' and 'very loud' restaurants is 0.28 stars lower than 'quiet' and 'average' ones. Therefore, turn down the audio system if it is too loud.
+
+```{r}
+#Delivery
+sum(RestaurantsDelivery=='')
+value=which(RestaurantsDelivery!='')
+aggregate(stars[value],list(Delivery=RestaurantsDelivery[value]),mean)
+t.test(stars[RestaurantsDelivery=='True'],stars[RestaurantsDelivery=='False'])
+```
+
+The result shows that restaurants that providing food delivery get significantly lower ratings. Probably it is because pizza is not good for delivery (it may take too long time), or people cannot express their needs clearly to the restaurant when placing the order. However, this result is quite hard to explain since it may include some other problems. If there are a large number of orders for food delivery, just keep it.
+
+```{r}
+#Groups
+sum(RestaurantsGoodForGroups=='')
+value=which(RestaurantsGoodForGroups!='')
+aggregate(stars[value],list(Groups=RestaurantsGoodForGroups[value]),mean)
+t.test(stars[RestaurantsGoodForGroups=='True'],stars[RestaurantsGoodForGroups=='False'])
+```
+
+**(Suggestion)** The average rating of a restaurant would increase by 0.22 stars if it is good for groups. So try to make a small area for groups, like putting some large tables, if possible.
+
+```{r}
+#Reservation
+sum(RestaurantsReservations=='')
+value=which(RestaurantsReservations!='')
+aggregate(stars[value],list(Reservation=RestaurantsReservations[value]),mean)
+t.test(stars[RestaurantsReservations=='True'],stars[RestaurantsReservations=='False'])
+```
+
+**(Suggestion)** The restaurants that accept reservations receive higher ratings (0.21 stars) than others. So we suggest restaurants making reservations accessible.
+
+```{r}
+#Takeout
+sum(RestaurantsTakeOut=='')
+value=which(RestaurantsTakeOut!='')
+aggregate(stars[value],list(Takeout=RestaurantsTakeOut[value]),mean)
+t.test(stars[RestaurantsTakeOut=='True'],stars[RestaurantsTakeOut=='False'])
+```
+
+The percentage of restaurants without takeout is too low (about 1.2%), so the result seems meaningless.
+
+```{r}
+#Wifi
+sum(WiFi=='')
+value=which(WiFi!='')
+aggregate(stars[value],list(Wifi=WiFi[value]),mean)
+anova(lm(stars[value]~WiFi[value]))
+t.test(stars[WiFi=='no'],stars[WiFi=='free'])
+```
+
+**(Suggestion)** There are few restaurants with paid WiFi, so we ignore them. The average rating of restaurants with free WiFi is 0.17 stars higher than ones without WiFi. We suggest that restaurants could offer free WiFi if it does not cost too much.
+
+```{r}
+#Ambience
+sum(Ambience_casual=='')
+value=which(Ambience_casual!='')
+aggregate(stars[value],list(Casual=Ambience_casual[value]),mean)
+t.test(stars[Ambience_casual=='True'],stars[Ambience_casual=='False'])
+t.test(stars[Ambience_classy=='True'],stars[Ambience_classy=='False'])
+```
+
+We can see that restaurants with casual or classy ambience get higher ratings. But ambience reflects different styles and themes of restaurants, which is not necessary to change.
+
+```{r warning=FALSE}
+#Parking
+for(i in 1:nrow(bus)){
+  if(sum(bus[i,27:31]=='False')==5){
+    bus$Parking[i]='False'
+  }else if(sum(bus[i,27:31]=='True')>0){
+    bus$Parking[i]='True'
+  }else{
+    bus$Parking[i]=''
+  }
+}
+attach(bus)
+
+Parking=factor(Parking)
+sum(Parking=='')
+value=which(Parking!='')
+aggregate(stars[value],list(Parking=Parking[value]),mean)
+t.test(stars[Parking=='True'],stars[Parking=='False'])
+```
+
+**(Suggestion)** We can see that having a parking space could increase the average rating by 0.36 stars. So we suggest that restaurants should try to offer a parking space, if possible.
+
+
+
+
+
