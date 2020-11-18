@@ -1,0 +1,12 @@
+name: m_3_app
+title: m_3_app
+username:
+account: ewang36
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3239154
+bundleId: 3877148
+url: https://ewang36.shinyapps.io/m_3_app/
+when: 1605725902.3891
+asMultiple: FALSE
+asStatic: FALSE

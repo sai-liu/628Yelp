@@ -1,0 +1,111 @@
+,Word,Word1,Count1,Word2,Count2,Word3,Count3,Sum
+0,pizza,rude,138,snob,111,sick,56,2814
+1,food,rude,127,sick,46,starving,25,2139
+2,cheese,stingy,20,boring,15,rude,7,688
+3,sauce,boring,20,stingy,18,sick,6,777
+4,service,rude,192,shitty,19,unprofessional,18,2584
+5,salad,boring,15,sick,9,rude,8,525
+6,restaurant,rude,36,uncomfortable,10,rudely,9,889
+7,crust,boring,9,rude,6,stingy,5,495
+8,chicken,sick,6,rude,4,boring,4,378
+9,beer,snob,15,rude,10,outrageous,4,270
+10,menu,rude,16,boring,4,bored,4,640
+11,delivery,rude,68,lazy,21,unprofessional,8,585
+12,staff,rude,183,unprofessional,21,disorganized,13,602
+13,price,outrageous,38,rude,8,shitty,4,533
+14,bread,rude,6,starving,4,boring,4,292
+15,dinner,rude,16,lazy,6,starving,6,330
+16,meal,rude,11,sick,6,starving,5,393
+17,pasta,boring,4,sick,3,ignore,2,231
+18,server,rude,65,rudest,6,sick,5,431
+19,flavor,boring,6,sick,2,stingy,2,254
+20,sandwich,rude,8,sick,3,outrageous,2,209
+21,lunch,rude,5,starving,4,lazy,4,229
+22,pie,lazy,3,snob,2,sick,2,212
+23,pepperoni,boring,5,stingy,3,rude,2,197
+24,location,rude,14,unprofessional,3,rudely,3,378
+25,fry,rude,3,outrageous,1,stingy,1,138
+26,meatball,boring,4,rude,1,starving,1,141
+27,waitress,rude,72,delay,7,rudely,6,432
+28,wine,outrageous,3,snob,3,uncomfortable,2,150
+29,burger,sick,4,snob,2,distracted,1,101
+30,sausage,boring,2,stingy,1,shy,1,120
+31,garlic,stingy,2,rude,2,boring,2,140
+32,meat,stingy,5,sick,2,outrageous,2,199
+33,tomato,boring,8,stingy,3, ,0,134
+34,appetizer,starving,3,delay,2,rude,2,151
+35,manager,rude,149,unprofessional,17,inconvenience,8,576
+36,style,snob,4,starving,1,outrageous,1,139
+37,mushroom,boring,4,insult,1,snob,1,103
+38,pepper,uncomfortable,1,dirt,1,delay,1,106
+39,dough,bored,2,snob,2,boring,2,136
+40,dessert,delay,3,stingy,1,rudely,1,112
+41,soup,shy,2,awkwardly,1,starving,1,93
+42,steak,delayed,1,outrageous,1,stingy,1,114
+43,onion,boring,2,stingy,1,ignore,1,78
+44,bartender,rude,67,ignore,6,unprofessional,4,197
+45,bacon,unhealthy,1,sick,1,outrageous,1,93
+46,kitchen,starving,5,rude,5,lazy,3,212
+47,hoagie,lazy,2,rude,2,hesitation,1,107
+48,fan,uncomfortable,3,boring,2,starving,1,445
+49,parking,inconvenience,3,inconvenient,1,rude,1,272
+50,mozzarella,boring,5,stingy,3,snob,2,82
+51,employee,rude,79,unprofessional,9,inconvenience,6,274
+52,water,sick,2,delayed,2,dirt,1,114
+53,potato,outrageous,1,starving,1,boring,1,61
+54,waiter,rude,14,unprofessional,3,delay,3,144
+55,entree,delayed,2,rude,2,starving,2,65
+56,oil,boring,1,sick,1,rude,1,69
+57,cream,inconvenient,1, ,0, ,0,53
+58,serve,ignore,2,sick,2,uncomfortable,1,128
+59,shrimp,boring,2,outrageous,1,dirt,1,49
+60,fish,sick,1,boring,1,unhealthy,1,52
+61,parmesan,boring,1,dirt,1, ,0,53
+62,spinach,lazy,1, ,0, ,0,38
+63,beef,sick,1,boring,1,starving,1,45
+64,egg, ,0, ,0, ,0,46
+65,brunch,sick,1,lazy,1,rude,1,47
+66,ice,rudely,1,distracted,1,rude,1,64
+67,chef,rude,3,bored,1,inconvenience,1,61
+68,breadstick,outrageous,1,stingy,1,rudely,1,50
+69,breakfast,starving,2,sick,1,boring,1,34
+70,cake,stingy,1,rude,1,snob,1,58
+71,marinara,boring,2,rude,1,insult,1,58
+72,pork,boring,1,sick,1, ,0,43
+73,spaghetti,boring,3,ignore,1,starving,1,49
+74,lettuce,boring,3,sick,2,snob,1,90
+75,bbq,starving,1,sick,1, ,0,40
+76,music,rude,2,uncomfortable,1,depressing,1,79
+77,lasagna,snob,1,boring,1,lazy,1,43
+78,cocktail,boring,1,lazy,1,ignore,1,32
+79,eggplant,boring,1,lazy,1, ,0,33
+80,gnocchi, ,0, ,0, ,0,45
+81,butter,shitty,2,boring,2,stingy,1,62
+82,ravioli,boring,3, ,0, ,0,39
+83,taco,sick,2, ,0, ,0,46
+84,margherita,insult,1,sick,1,snob,1,39
+85,chocolate, ,0, ,0, ,0,36
+86,coffee,inconvenience,1,snob,1,starving,1,44
+87,takeout,sick,2,lazy,1,inconvenient,1,75
+88,management,rude,29,unprofessional,4,sick,3,200
+89,building,lazy,2,delay,1,uncomfortable,1,69
+90,tv,lazy,1,bored,1,rude,1,35
+91,soda,rude,2,unhealthy,1,sick,1,51
+92,attitude,rude,29,unprofessional,3,rudeness,3,198
+93,salt,boring,1,uncomfortable,1,starving,1,56
+94,seafood,snob,2,sick,2,boring,1,31
+95,caesar,boring,1,embarrassing,1,rude,1,43
+96,grease,insult,2,ignore,1,rude,1,66
+97,buffet,sick,2,boring,1, ,0,33
+98,worker,rude,19,rudest,1,unprofessional,1,81
+99,tiramisu, ,0, ,0, ,0,32
+100,doughy, ,0, ,0, ,0,33
+101,cooking,delay,1,uncomfortable,1,shitty,1,61
+102,diner,shitty,1,hesitation,1,rudeness,1,36
+103,fee,outrageous,2,petty,1,shitty,1,35
+104,wing,rude,9,shitty,3,snob,3,272
+105,topping,boring,8,rude,7,stingy,5,304
+106,dressing,boring,2,insulting,1,rude,1,143
+107,olive,insult,1,distracted,1,snob,1,69
+108,serving,rude,4,disorganized,1,outrageous,1,75
+109,seasoning,boring,1, ,0, ,0,31
