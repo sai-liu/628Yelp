@@ -1,0 +1,111 @@
+,Word,Word1,Count1,Word2,Count2,Word3,Count3,Sum,Suggestion
+0,pizza,rude,138,snob,111,sick,56,2814,Customers don't like the unpolite service attitude and sick taste on pizza; please improve pizza taste and service attitude.
+1,food,rude,127,sick,46,starving,25,2139,Customers don't want to wait too long and have sick food; please make your food service faster and delicious.
+2,cheese,stingy,20,boring,15,rude,7,688,Customers don't want to wait too long and have expansive sick and worthless cheese; please make your cheese service faster cheaper delicious and offer big size.
+3,sauce,boring,20,stingy,18,sick,6,777,Customers don't want to wait too long and have expansive sick and worthless sauce; please make your sauce service faster cheaper delicious and offer big size.
+4,service,rude,192,shitty,19,unprofessional,18,2584,Customers don't like service with bad attitude and unprofessional offer; please improve your business service attitude and learn to be a professional pizza shop.
+5,salad,boring,15,sick,9,rude,8,525,Customers don't want to wait too long and have sick salad with bad service attitude; please make your salad service faster delicious and offer with respect.
+6,restaurant,rude,36,uncomfortable,10,rudely,9,889,Customers don't like restaurant with rude service; please serve your customers mannerly.
+7,crust,boring,9,rude,6,stingy,5,495,Customers don't want to wait too long and have worthless crust; please make your crust service faster and cost-efficient.
+8,chicken,sick,6,rude,4,boring,4,378,Customers don't want to wait too long to have sick chicken with bad service attitude; please make your chicken service faster and delicious with respect.
+9,beer,snob,15,rude,10,outrageous,4,270,Customers don't want to have beer with bad service attitude; please serve your beer service with respect.
+10,menu,rude,16,boring,4,bored,4,640,Customers want you offer a wide selection of menu with respect; please expand your menu on menu suggestion and change your service attitude.
+11,delivery,rude,68,lazy,21,unprofessional,8,585,Customers want you deliver their food faster mannerly and get food fresh as in restaurants; please improve your delivery speed and quality.
+12,staff,rude,183,unprofessional,21,disorganized,13,602,Customers don't like rude disordered staff with no train; it's time to train your staff.
+13,price,outrageous,38,rude,8,shitty,4,533,Customers don't want to pay too much for your service; it's time to low the price.
+14,bread,rude,6,starving,4,boring,4,292,Customers don't want to wait too long to have bread with bad service attitude; please make your bread service faster and mannerly.
+15,dinner,rude,16,lazy,6,starving,6,330,Customers don't want to wait too long to have dinner here with bad service attitude; please offer your dinner faster and mannerly.
+16,meal,rude,11,sick,6,starving,5,393,Customers don't want to wait too long to have sick meal here with bad service attitude; please offer your meal delicious faster and mannerly.
+17,pasta,boring,4,sick,3,ignore,2,231,Customers don't want to wait too long to have pasta here with bad service attitude; please offer your pasta delicious faster and mannerly.
+18,server,rude,65,rudest,6,sick,5,431,Customers hate rude and unpolite service; it's time to change your service attitude.
+19,flavor,boring,6,sick,2,stingy,2,254,Customers complain about slow worthless and sick flavor; please serve faster cheaper and delicious flavor.
+20,sandwich,rude,8,sick,3,outrageous,2,209,Customers complain about sick sandwich service with rude attitude; try improve taste and service attitude.
+21,lunch,rude,5,starving,4,lazy,4,229,Customers hate rude and slow lunch service here; you can try offer faster lunch service with respect.
+22,pie,lazy,3,snob,2,sick,2,212,Customers don't like sick pie with slow and unpolite service; you can try improve pie taste and service speed and attitude.
+23,pepperoni,boring,5,stingy,3,rude,2,197,Customers don't like slow and worthless pepperoni with unpolite service; please improve cost-efficient and fast service with respect.
+24,location,rude,14,unprofessional,3,rudely,3,378,Customers hate your attitude when you provide location in phone or website; you can do better when introduce yourselves.
+25,fry,rude,3,outrageous,1,stingy,1,138,Customers don't like worthless fry with bad service attitude; you can serve cost-efficient fry mannerly.
+26,meatball,boring,4,rude,1,starving,1,141,Customers complain the slow and unpolite service of meatball; try offer meatball service faster and mannerly.
+27,waitress,rude,72,delay,7,rudely,6,432,Customers think your waitress is rude and slow; try train them to offer faster and mannerly service.
+28,wine,outrageous,3,snob,3,uncomfortable,2,150,Customers hate your wine taste and price; try change them to avoid negative reviews.
+29,burger,sick,4,snob,2,distracted,1,101,Customers complain about your burger taste and bad service; try fix them to avoid negative reviews.
+30,sausage,boring,2,stingy,1,shy,1,120,Customers think your sausage service is slow and bad in attitude; you should offer sausage faster and mannerly.
+31,garlic,stingy,2,rude,2,boring,2,140,Customers think your garlic service is rude and slow; you should offer garlic faster and mannerly.
+32,meat,stingy,5,sick,2,outrageous,2,199,Customers think your meat is worthless sick; you should offer cost-efficient meat.
+33,tomato,boring,8,stingy,3, ,0,134,Customers think your tomato product selection is narrow and worthless; you should offer cost-efficient and various tomato product.
+34,appetizer,starving,3,delay,2,rude,2,151,Customers complain about your appetizer service is slow and unpolite; you should offer appetizer faster and mannerly.
+35,manager,rude,149,unprofessional,17,inconvenience,8,576,Customers think your manager is rude untrained; you should train your manager.
+36,style,snob,4,starving,1,outrageous,1,139,Customers think your business style is rude and slow; try let your business service to be mannerly and faster.
+37,mushroom,boring,4,insult,1,snob,1,103,Customers complain about your mushroom product selection is narrow and service is slow; you should fix them. 
+38,pepper,uncomfortable,1,dirt,1,delay,1,106,Customers don't like insanitary and slow pepper product; it's time to fix them. 
+39,dough,bored,2,snob,2,boring,2,136,Customers think your pizza made by dough is too slow; make pizza produce faster.
+40,dessert,delay,3,stingy,1,rudely,1,112,Customers think your dessert service is slow and rude; try fix it.
+41,soup,shy,2,awkwardly,1,starving,1,93,Customers complain about your soup service as slow and bad; please offer soup faster and mannerly. 
+42,steak,delayed,1,outrageous,1,stingy,1,114,Customers complain about your steak is worthless and slow; you should offer steak faster and more cost-efficient.
+43,onion,boring,2,stingy,1,ignore,1,78,Customers think your onion service is slow and rude; you should offer onion product service faster and mannerly.
+44,bartender,rude,67,ignore,6,unprofessional,4,197,Customers think bartender in your business as a rude and untrained one; you should train them to offer professional and polite service.
+45,bacon,unhealthy,1,sick,1,outrageous,1,93,Customers think your bacon product is unhealthy and sick; you should produce healthy and delicious bacon product.
+46,kitchen,starving,5,rude,5,lazy,3,212,Customers complain your kitchen make food too slow; you should let them make food faster and mannerly. 
+47,hoagie,lazy,2,rude,2,hesitation,1,107,Customers don't like slow and rude hoagie service; you should offer faster hoagie mannerly.
+48,fan,uncomfortable,3,boring,2,starving,1,445,Fan of your business hope you to offer service faster and comfortable restaurants; try make your business better.
+49,parking,inconvenience,3,inconvenient,1,rude,1,272,Customers hold that your parking is inconvenient and service is rude; you should make your parking better.
+50,mozzarella,boring,5,stingy,3,snob,2,82,Customers think your mozzarella product selection is narrow and worthless; you should offer more selection and cost-efficient mozzarella product.
+51,employee,rude,79,unprofessional,9,inconvenience,6,274,Customers think your employee is rude and untrained; you should train your employee to offer better service.
+52,water,sick,2,delayed,2,dirt,1,114,Customers think your water is not fresh and service is slow; try make it better.
+53,potato,outrageous,1,starving,1,boring,1,61,Customers think your potato product is slow and sick; please offer potato product faster and delicious.
+54,waiter,rude,14,unprofessional,3,delay,3,144,Customers don't like rude and slow waiter; you should train your waiter.
+55,entree,delayed,2,rude,2,starving,2,65,Customers don't like rude and slow entree service; try offer faster entree mannerly.
+56,oil,boring,1,sick,1,rude,1,69,Customers don't like too oily food; you should check your menu.
+57,cream,inconvenient,1, ,0, ,0,53,Customers complains more about cream product service; try fix them.
+58,serve,ignore,2,sick,2,uncomfortable,1,128,Customers don't like rude service and sick food; you should change them.
+59,shrimp,boring,2,outrageous,1,dirt,1,49,Customers don't like shrimp product selection too narrow and dirty; check your shrimp product.
+60,fish,sick,1,boring,1,unhealthy,1,52,Customers don't like fish product selection too narrow and slow and unhealthy; you should provide healthy faster and more kinds of fish product.
+61,parmesan,boring,1,dirt,1, ,0,53,Customers don't like parmesan product selection too narrow and dirty; check your parmesan product.
+62,spinach,lazy,1, ,0, ,0,38,Customers don't like spinach product too slow; you should provide faster spinach product. 
+63,beef,sick,1,boring,1,starving,1,45,Customers don't like beef product too slow sick and too narrow in selection; try fix them.
+64,egg,sick,1, ,0, ,0,46,Customers don't like egg product too sick; you should make your egg product delicious.
+65,brunch,sick,1,lazy,1,rude,1,47,Customers don't like brunch service too slow and rude; try offer brunch faster and mannerly.
+66,ice,rudely,1,distracted,1,rude,1,64,Customers don't like rude ice product service; try offer ice product service mannerly.
+67,chef,rude,3,bored,1,inconvenience,1,61,Customers hate rude chef or their slow service;  you should train your chef work mannerly and provide more kinds of food. 
+68,breadstick,outrageous,1,stingy,1,rudely,1,50,Customers don't like breadstick service rude and worthless; you should make breadstick service mannerly and cost-efficient. 
+69,breakfast,starving,2,sick,1,boring,1,34,Customers don't like breakfast slow and sick; please offer breakfast faster and delicious.
+70,cake,stingy,1,rude,1,snob,1,58,Customers don't like cake worthless and served in rude; please offer cost-efficient cake mannerly. 
+71,marinara,boring,2,rude,1,insult,1,58,Customers don't like marinara service to be slow and rude; you should offer marinara faster and mannerly.
+72,pork,boring,1,sick,1, ,0,43,Customers don't like pork service to be slow and sick; you should offer delicious pork faster.
+73,spaghetti,boring,3,ignore,1,starving,1,49,Customers don't like spaghetti service too slow; you should offer spaghetti faster. 
+74,lettuce,boring,3,sick,2,snob,1,90,Customers don't like lettuce service too sick and slow; you should offer delicious lettuce service faster.
+75,bbq,starving,1,sick,1, ,0,40,Customers don't like sick bbq with slow service; you should offer delicious bbq faster.
+76,music,rude,2,uncomfortable,1,depressing,1,79,Customers want happy music in restaurants; try offer them. 
+77,lasagna,snob,1,boring,1,lazy,1,43,Customers don't like lasagna slow and worthless service; you should try offer faster lasagna service.
+78,cocktail,boring,1,lazy,1,ignore,1,32,Customers don't like slow and unpolite service in cocktail; ask your business whether this situation happen. 
+79,eggplant,boring,1,lazy,1, ,0,33,Customers don't like eggplant offered too slowly; please offer eggplant service faster and mannerly. 
+80,gnocchi,sick,1, ,0, ,0,45,Customers want gnocchi to be delicious; please avoid sick gnocchi.
+81,butter,shitty,2,boring,2,stingy,1,62,Customers don't like sick butter product; you should make butter product delicious. 
+82,ravioli,boring,3, ,0, ,0,39,Customers don't like ravioli offered too slowly; please offer ravioli faster and mannerly. 
+83,taco,sick,2, ,0, ,0,46,Customers don't like taco too sick; you should change your taco delicious. 
+84,margherita,insult,1,sick,1,snob,1,39,Customers don't like margherita service too rude and sick; try make this service delicious and mannerly.
+85,chocolate,sick,1, ,0, ,0,36,Customers don't like sick chocolate; you should provide delicious chocolate product. 
+86,coffee,inconvenience,1,snob,1,starving,1,44,Customers don't like slow and inconvenient coffee service; please make your coffee service faster and convenient. 
+87,takeout,sick,2,lazy,1,inconvenient,1,75,Customers don't like slow sick and inconvenient takeout; it's time to check your takeout quality.
+88,management,rude,29,unprofessional,4,sick,3,200,Customers don't like untrained and rude management; a professional and polite management is important for your business.
+89,building,lazy,2,delay,1,uncomfortable,1,69,Customers don't like uncomfortable building in your business; please make your building comfortable to make your customers stay in home.
+90,tv,lazy,1,bored,1,rude,1,35,Customers don't like boring tv show; try make your tv show in your business rich and fun.
+91,soda,rude,2,unhealthy,1,sick,1,51,Customers don't like unhealthy and sick soda offered in rude; please check your soda service is healthy delicious and polite enough. 
+92,attitude,rude,29,unprofessional,3,rudeness,3,198,Customers don't like your service attitude too rude and untrained; please make your attitude better to attract more customers. 
+93,salt,boring,1,uncomfortable,1,starving,1,56,Customers don't like salt in your food too less or too much to make them uncomfortable; a reasonable amount of salt in food is a kind of art.
+94,seafood,snob,2,sick,2,boring,1,31,Customers think your seafood is sick and slow; try offer delicious and fast seafood.
+95,caesar,boring,1,embarrassing,1,rude,1,43,Customers complain about your slow rude service on caesar; change them.
+96,grease,insult,2,ignore,1,rude,1,66,Customers think your grease service is rude and slow; try to improve it.
+97,buffet,sick,2,boring,1, ,0,33,Customers think your buffet is slow and sick; make them faster and delicious.
+98,worker,rude,19,rudest,1,unprofessional,1,81,Customers think your worker is rude and untrained; it's time to train your worker.
+99,tiramisu,sick,1, ,0, ,0,32,Customers think your tiramisu is sick ;try make it delicious.
+100,doughy,sick,1, ,0, ,0,33,Customers think your doughy is sick ;try make it delicious.
+101,cooking,delay,1,uncomfortable,1,shitty,1,61,Customers think your cooking is slow and sick ;try make your cooking faster and delicious.
+102,diner,shitty,1,hesitation,1,rudeness,1,36,Customers complain about your diner slow and rude service; you can provide faster and mannerly service.
+103,fee,outrageous,2,petty,1,shitty,1,35,Customers think your fee is not reasonable; try let your fee down.
+104,wing,rude,9,shitty,3,snob,3,272,Customers don't like your wing taste and service attitude; please offer delicious wing mannerly.
+105,topping,boring,8,rude,7,stingy,5,304,Customers think your topping selection is narrow and service attitude is bad; please try offer more kinds of topping with respect.
+106,dressing,boring,2,insulting,1,rude,1,143,Customers complain about your narrow selection and rude service of dressing; please try offer more kinds of dressing with respect.
+107,olive,insult,1,distracted,1,snob,1,69,Customers don't like your service attitude towards olive; try improve your service attitude.
+108,serving,rude,4,disorganized,1,outrageous,1,75,Customers don't like service with bad attitude and untrained offer; please improve your business service attitude and learn to be a professional pizza shop.
+109,seasoning,boring,1, ,0, ,0,31,Customers want wide selection in seasoning; try offer more kinds of seasoning.
