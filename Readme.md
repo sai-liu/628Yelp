@@ -4,6 +4,16 @@
 
 **Group members:** Yicen Liu; Hua Tong; Enze Wang
 
+
+
+Yicen Liu: liu943@wisc.edu
+
+Hua Tong: htong24@wisc.edu
+
+Enze Wang: ewang36@wisc.edu
+
+
+
 This code is for Yelp project, Module3, Stat 628 , 2020 Fall, University of Wisconsin-Madison. This project want to give data-driven, actionable suggestion based on reviews and business data. 
 
 **Shiny application:** https://ewang36.shinyapps.io/m_3_app/
