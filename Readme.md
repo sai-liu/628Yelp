@@ -41,7 +41,7 @@ This code is for Yelp project, Module3, Stat 628 , 2020 Fall, University of Wisc
     * Suggestion_Important_Positive_by_word.csv: Contains review suggestion for important positive words.
     * Suggestion.csv: Contains menu, review and business suggestion.
     * rsconnect: Made from publishment to Shiny applicaition website.
-  * 1_json_to_csv.ipynb: **See below for detailed structure.**
+  * 1_json_to_csv.ipynb: **Run the code from 1_ to 9_, wait the results of code before then run the following one. See below for detailed structure.**
   * 2_Data_Clean.ipynb
   * 3_Exploratory_Data_Analysis.ipynb
   * 4_Word_Importance_TF_IDF.ipynb
