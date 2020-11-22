@@ -6,11 +6,13 @@
 
 
 
-Yicen Liu: liu943@wisc.edu
+| Member    | Email            | GitHub Account       |
+| --------- | ---------------- | -------------------- |
+| Yicen Liu | liu943@wisc.edu  | sai-liu Yicen Liu    |
+| Hua Tong  | htong24@wisc.edu | Tonghua35            |
+| Enze Wang | ewang36@wisc.edu | moslandwez Enze Wang |
 
-Hua Tong: htong24@wisc.edu
 
-Enze Wang: ewang36@wisc.edu
 
 
 
@@ -26,7 +28,7 @@ This code is for Yelp project, Module3, Stat 628 , 2020 Fall, University of Wisc
 
 |               | Github Repository; Main Code                                 | Shiny Application                | Four-Pages Summary                                           | Narrated Presentation                                        |
 | ------------- | ------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Yicen Liu** | Main editor the 4_Word_Importance_Regression_Tree.ipynb. Fix other code. | Fix and review the application.  | Fix other parts.                                             | Main editor of mp4 file. Speaker of data clean, business and menu suggesion part. |
+| **Yicen Liu** | Main editor the 4_Word_Importance_Regression_Tree.ipynb. Fix other code. | Fix and review the application.  | Editor of tree regression parts and fix other parts.         | Main editor of mp4 file. Speaker of data clean, business and menu suggesion part. |
 | **Hua Tong**  | Main editor the 8_Analysis_Business.ipynb. Fix other code.   | Fix and review the application.  | Main editor of summary                                       | Speaker of Shiny application part.                           |
 | **Enze Wang** | Main editor of 1_json_to_csv.ipynb; 2_Data_Clean.ipynb; 3_Exploratory_Data_Analysis.ipynb; 4_Word_Importance_TF_IDF.ipynb; 5_Word_Variable_Choose.ipynb; 6_Analysis_Noun_Class.ipynb; 7_1_Review_Attitude.ipynb; 7_2_Analysis_Noun_Attitude.ipynb; 9_Suggestion_Writer.ipynb. Responsible, maintain the GitHub and fix other code. | Main editor of Shiny application | Editor of review attitude, analysis part  and fix other part. | Main editor of  pptx file. Speaker of review attitude, analysis part. |
 
