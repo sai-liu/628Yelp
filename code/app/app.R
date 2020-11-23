@@ -107,7 +107,7 @@ server<-shinyServer(function(input, output) {
   
   output$stars <- renderUI({
     business_stars=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"stars"]
-    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business stars, you can see your business stars position (green line) in the following plots, which can show your overall rating in Yelp, the red histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business stars, you can see your business stars position (red line) in the following plots, which can show your overall rating in Yelp, the blue histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
     
   })
   
@@ -126,7 +126,7 @@ server<-shinyServer(function(input, output) {
   
   output$Average_Review_Star_Rating <- renderUI({
     
-    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (green line) in the following plots, which can show your average level of review rating in Yelp, the red histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Attitude Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (red line) in the following plots, which can show your average level of review rating in Yelp, the blue histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Attitude Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
     
     
   })
@@ -136,8 +136,7 @@ server<-shinyServer(function(input, output) {
     ggplot(Suggestion, aes(x = stars)) +
       geom_histogram(aes(fill = ..count..),binwidth = 0.5)+
       scale_y_continuous(name = "Count")+
-      ggtitle("Your position (green line) in business star rating") +
-      scale_fill_gradient("Count", low = "blue", high = "red")+
+      ggtitle("Your position (red line) in business star rating") +
       theme(plot.title = element_text(family="Tahoma",size = 16),
             text = element_text(family = "Tahoma"),
             axis.title = element_text(size = 16),
@@ -146,17 +145,16 @@ server<-shinyServer(function(input, output) {
             axis.text.y = element_text(size=16),
             legend.title=element_text(face = "bold", size = 9),
             aspect.ratio = 1)+
-      geom_vline(xintercept = Your_business_stars, size = 1, colour = "#00FC2A")
+      geom_vline(xintercept = Your_business_stars, size = 1.5, colour = "#FC0000")
       
   })
   
   output$Average_Review_Star_RatingPlot <- renderPlot({
     Your_Average_Review_Star_Rating=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]
     ggplot(Suggestion, aes(x = Average_Review_Star_Rating)) +
-      geom_histogram(aes(fill = ..count..),binwidth = 0.5)+
+      geom_histogram(aes(fill = ..count..),binwidth = 0.3)+
       scale_y_continuous(name = "Count")+
-      ggtitle("Your position (green line) in average review star rating") +
-      scale_fill_gradient("Count", low = "blue", high = "red")+
+      ggtitle("Your position (red line) in average review star rating") +
       theme(plot.title = element_text(family="Tahoma",size = 16),
             text = element_text(family = "Tahoma"),
             axis.title = element_text(size = 16),
@@ -165,7 +163,7 @@ server<-shinyServer(function(input, output) {
             legend.text = element_text(size = 16),
             legend.title=element_text(face = "bold", size = 9),
             aspect.ratio = 1)+
-      geom_vline(xintercept = Your_Average_Review_Star_Rating, size = 1, colour = "#00FC2A")
+      geom_vline(xintercept = Your_Average_Review_Star_Rating, size = 1.5, colour = "#FC0000")
     
   })
   
