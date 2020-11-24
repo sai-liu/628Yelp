@@ -55,7 +55,7 @@ ui<-navbarPage('Suggestion For Pizza Business on Yelp App',inverse = T,collapsib
                                         
                             
                                    
-                                        tabPanel("Review Attitude Suggestion",
+                                        tabPanel("Review Suggestion",
                                                  h3("What is it?"),htmlOutput("ReviewSuggestionHelp"),tags$style("#ReviewSuggestionHelp {font-size:16px;}"),
                                                  fluidRow(
                                                    column(5,h3("Suggestion"),htmlOutput("ReviewTextSuggestion"),tags$style("#ReviewTextSuggestion {font-size:16px;}")),
@@ -107,7 +107,7 @@ server<-shinyServer(function(input, output) {
   
   output$stars <- renderUI({
     business_stars=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"stars"]
-    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business stars, you can see your business stars position (red line) in the following plots, which can show your overall rating in Yelp, the blue histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business star rating, you can see your business star rating position (red line) in the following plots, which can show your overall rating in Yelp, the blue histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
     
   })
   
@@ -126,7 +126,7 @@ server<-shinyServer(function(input, output) {
   
   output$Average_Review_Star_Rating <- renderUI({
     
-    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (red line) in the following plots, which can show your average level of review rating in Yelp, the blue histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Attitude Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (red line) in the following plots, which can show your average level of review rating in Yelp, the blue histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
     
     
   })
@@ -270,7 +270,7 @@ server<-shinyServer(function(input, output) {
   })
   
   output$BusinessSuggestionHelp <- renderUI({
-    HTML(paste("Here we find every factor according to all business and their business star rating in Yelp data base and find all factors which has significant difference in business star rating between their option in the following business category. There are many attribute in our data base but the following is highly related with business star rating. Some results may surprise you, but we recommend you combine our suggestion with your reality to make plan for your future. On the other hand, if you find any mistake between the option and your reality in the following factors. Please contact Yelp or us to update your data."))
+    HTML(paste("Here we study every factor according to all business and their business star rating in Yelp data base and find all factors which has significant difference in business star rating between their option in the following business category. There are many attribute in our data base but the following is highly related with business star rating. Some results may surprise you, but we recommend you to combine our suggestion with your reality to make plan for your future. On the other hand, if you find any mistake between the option and your reality in the following factors. Please contact Yelp or us to update your data."))
   })
   
   output$MenuSuggestionHelp <- renderUI({
@@ -286,7 +286,7 @@ server<-shinyServer(function(input, output) {
   output$add <- renderUI({
     str1=paste("We found that the following food noun never exists on your review:",'<br/>')
     str2=paste("<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Add"],"</b>",'<br/>')
-    str3=paste("In fact, the more frequent above food in review individually, the mean review star rating will increase. If you do not offer the food above, try add them into your menu.",'<br/>')
+    str3=paste("In fact, the more frequent food above in review individually, the mean review star rating will increase. If you do not offer the food above, try add them into your menu.",'<br/>')
     if(isTruthy(Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Add"])==TRUE){
       HTML(paste(str1, str2,str3, sep = '<br/>'))
     }else{
@@ -320,7 +320,7 @@ server<-shinyServer(function(input, output) {
   output$avoid <- renderUI({
     str1=paste("We found that the following food noun never exists on your review:",'<br/>')
     str2=paste("<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Avoid"],"</b>",'<br/>')
-    str3=paste("In fact, the more frequent above food in review individually, the mean review star rating will decrease. Think twice before you want to add them on your menu.",'<br/>','<br/>','<br/>','<br/>','<br/>')
+    str3=paste("In fact, the more frequent food above in review individually, the mean review star rating will decrease. Think twice before you want to add them on your menu.",'<br/>','<br/>','<br/>','<br/>','<br/>')
     if(isTruthy(Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Avoid"])==TRUE){
       HTML(paste(str1, str2,str3, sep = '<br/>'))
     }else{

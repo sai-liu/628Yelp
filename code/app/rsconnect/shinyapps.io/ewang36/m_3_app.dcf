@@ -5,8 +5,8 @@ account: ewang36
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3239154
-bundleId: 3892836
+bundleId: 3900795
 url: https://ewang36.shinyapps.io/m_3_app/
-when: 1606093422.56702
+when: 1606241196.6065
 asMultiple: FALSE
 asStatic: FALSE
