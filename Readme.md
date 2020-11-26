@@ -58,7 +58,7 @@ This code is for Yelp project, Module3, Stat 628 , 2020 Fall, University of Wisc
 * data: **See below for detailed structure.** 
   * We keep all data below 100M in our data folder in GitHub, we save all data on https://drive.google.com/drive/folders/16EfjTT4BNjj9D6pakG6MR0Bpt2Pj3Hfi?usp=sharing 
 * Module_3_Summary.pdf: Our summary file.
-* Module_3_Presentation.mp4: Our presentation video.
+* Module_3_Presentation.mp4_480p; Module_3_Presentation.mp4_720p: Our presentation video.
 
 
 
