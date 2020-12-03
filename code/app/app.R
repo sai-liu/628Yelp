@@ -90,7 +90,7 @@ server<-shinyServer(function(input, output) {
   })
   
   output$BasicSuggestionHelp <- renderUI({
-      HTML(paste("Are your pizza business in Pittsburgh, Cleveland, Madison and Urbana-Champaign? Can you see yourselves on Yelp? If yes. Congratulation! Just try our website find yourselves and get the suggestion. <br/>
+      HTML(paste("Are your pizza business in Pittsburgh, Cleveland, Madison and Urbana-Champaign? Can you see yourselves on Yelp? If yes. Congratulation! Try our website find yourselves and get our suggestion. <br/>
                  <br/>
                  On this page you will see your name, address, location on map, your business star rating and average review star rating on Yelp. You can also know your total number of review on Yelp.
                  "))
@@ -107,7 +107,7 @@ server<-shinyServer(function(input, output) {
   
   output$stars <- renderUI({
     business_stars=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"stars"]
-    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business star rating, you can see your business star rating position (red line) in the following plots, which can show your overall rating in Yelp, the blue histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",business_stars," of 5.","</b>","<br/>",'<br/>',"This is your business star rating, you can see your business star rating position (red line) in the following plot, which can show your overall rating in Yelp, the blue histogram is the distribution of business star rating of all businesses, turn to Business Suggestion to see how to increase your business stars.",'<br/>',"<br/>"))
     
   })
   
@@ -115,7 +115,7 @@ server<-shinyServer(function(input, output) {
     num=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Review_Num"]
     if(isTruthy(num)==TRUE){
       if(num<30){
-        HTML(paste("<br/>","<b>",num,"</b>","<br/>","<br/>","Your review is too few in our data set, it is difficult to give suggestion for this level of review num, try make your busienss popular!"))
+        HTML(paste("<br/>","<b>",num,"</b>","<br/>","<br/>","Your review is too few in our data set, it is difficult to give suggestion for this level of review number, try make your busienss popular!"))
       }
       else{
         HTML(paste("<br/>","<b>",num,"</b>","<br/>"))
@@ -126,7 +126,7 @@ server<-shinyServer(function(input, output) {
   
   output$Average_Review_Star_Rating <- renderUI({
     
-    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (red line) in the following plots, which can show your average level of review rating in Yelp, the blue histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
+    HTML(paste('<br/>',"<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Average_Review_Star_Rating"]," of 5.","</b>","<br/>",'<br/>',"This is your average review star rating, you can see your position (red line) in the following plot, which can show your average level of review rating in Yelp, the blue histogram is the distribution of average review star rating of all businesses, turn to Menu Suggestion and Review Suggestion to see how to increase your review stars.",'<br/>',"<br/>"))
     
     
   })
@@ -204,7 +204,7 @@ server<-shinyServer(function(input, output) {
     if (value==1) {
       HTML(paste("You business is good for kids, the mean business star rating of business good for kids is higher than that is not. Just keep toy and requirement for kids and do better!"))
     } else {
-      HTML(paste("You business is not good for kids or has no record in data, the mean business star rating of business good for kids is about 0.3 higher than that is not. Try prepare something like child seats, toys or pizza for children if possible."))
+      HTML(paste("You business is not good for kids or has no record in data, the mean business star rating of business good for kids is about 0.3 higher than that is not. Try prepare something like children seats, toys or pizza for children if possible."))
     }
     }
   })
@@ -252,7 +252,7 @@ server<-shinyServer(function(input, output) {
     value=Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"RestaurantsDelivery"]
     if(isTruthy(value)==TRUE){
     if (value==1) {
-      HTML(paste("You business do not offer delivery, the mean business star rating of business offer delivery is lower than that offer. If you plan to offer delivery please keep food fresh on the way!"))
+      HTML(paste("You business do not offer delivery, the mean business star rating of business offer delivery is lower than that do not offer. If you plan to offer delivery please keep food fresh on the way!"))
     } else {
       HTML(paste("You business offer delivery or has no record in data, the mean business star rating of business offer delivery is about 0.5 lower than that do not. It is time for you to check your delivery quality!"))
     }
@@ -270,21 +270,21 @@ server<-shinyServer(function(input, output) {
   })
   
   output$BusinessSuggestionHelp <- renderUI({
-    HTML(paste("Here we study every factor according to all business and their business star rating in Yelp data base and find all factors which has significant difference in business star rating between their option in the following business category. There are many attribute in our data base but the following is highly related with business star rating. Some results may surprise you, but we recommend you to combine our suggestion with your reality to make plan for your future. On the other hand, if you find any mistake between the option and your reality in the following factors. Please contact Yelp or us to update your data."))
+    HTML(paste("Here we study every factor according to all business and their business star rating in Yelp data base and find all factors which has significant difference in business star rating between their option in the following business category, The main method is ANOVA and T test. There are many attributes in our data base but the following are highly related with business star rating. Some results may surprise you, but we recommend you to combine our suggestion with your reality to make plan for your future. On the other hand, if you find any mistake between the option and your reality in the following factors. Please contact Yelp or us to update your data."))
   })
   
   output$MenuSuggestionHelp <- renderUI({
-    HTML(paste("Are customers bored with your menu?",'<br/>',"Do you want to offer something new to attract more customers? ",'<br/>',"It's time to refer to this page to extend your menu. We find several frequent food related noun in all review and find the connection between their occurrence frequency with review star rating. Therefore something might have been on your menu. For those food noun whose occurrence may decrease review star rating, you can have deep search on your review and find is it necessary to change or remove them."))
+    HTML(paste("Are customers bored with your menu?",'<br/>',"Do you want to offer something new to attract more customers? ",'<br/>',"It's time to refer to this page to extend your menu. We find several frequent food related noun in all review and find the connection between their occurrence frequency with review star rating, The main method is linear and lasso regression. Something might have been on your menu. For those food noun whose occurrence may decrease review star rating, you can have deep search on your review and find is it necessary to change or remove them."))
   })
   
   output$ReviewSuggestionHelp <- renderUI({
-    HTML(paste("Do you want to know how customers evaluate your food or service?",'<br/>'," Are there more positive or negative reviews on your business food or service?",'<br/>'," We develop a review attitude function which can show you the answer. In this page you can see the percentage of positive, neutral and negative reviews on some kinds of food or service. And according to the review from all business, we find the top important positive and negative words according to all business results and give the suggestion how to do next."))
+    HTML(paste("Do you want to know how customers evaluate your food or service?",'<br/>'," Are there more positive or negative reviews on your business food or service?",'<br/>'," We develop a review attitude function which can show you the answer. In this page you can see the percentage of positive, neutral and negative reviews on some kinds of food or service. The main method is ANOVA and T test. And according to the review from all business, we find the top important positive and negative words according to all business results and give the suggestion how to do next."))
   })
   
 
   
   output$add <- renderUI({
-    str1=paste("We found that the following food noun never exists on your review:",'<br/>')
+    str1=paste("We found that the following food noun never exist on your review:",'<br/>')
     str2=paste("<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Add"],"</b>",'<br/>')
     str3=paste("In fact, the more frequent food above in review individually, the mean review star rating will increase. If you do not offer the food above, try add them into your menu.",'<br/>')
     if(isTruthy(Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Add"])==TRUE){
@@ -318,7 +318,7 @@ server<-shinyServer(function(input, output) {
   })
   
   output$avoid <- renderUI({
-    str1=paste("We found that the following food noun never exists on your review:",'<br/>')
+    str1=paste("We found that the following food noun never exist on your review:",'<br/>')
     str2=paste("<b>",Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Avoid"],"</b>",'<br/>')
     str3=paste("In fact, the more frequent food above in review individually, the mean review star rating will decrease. Think twice before you want to add them on your menu.",'<br/>','<br/>','<br/>','<br/>','<br/>')
     if(isTruthy(Suggestion[which(Suggestion[,"city"]==input$city & Suggestion[,"name"]==input$name &  Suggestion[,"address"]==input$address ),"Avoid"])==TRUE){
@@ -354,17 +354,13 @@ server<-shinyServer(function(input, output) {
         plotname <- paste("plot", i, sep="")
         plotOutput(plotname, height = 180, width = 518)
       })
-      
-      # Convert the list to a tagList - this is necessary for the list of items
-      # to display properly.
+
       do.call(tagList, plot_output_list)
     }
   })
   
   for (i in 1:200) {
-    # Need local so that each item gets its own number. Without it, the value
-    # of i in the renderPlot() will be the same across all instances, because
-    # of when the expression is evaluated.
+
     local({
       my_i <- i
       plotname <- paste("plot", my_i, sep="")
@@ -423,7 +419,7 @@ server<-shinyServer(function(input, output) {
     if(isTruthy(Text)==TRUE){
       HTML(paste("     "))
     }else{
-      HTML(paste("It seems that your review number is too less for us to give your customized suggestion here. You can view other business suggestion and analysis to improve your business, make it popular and get more reviews on Yelp!"))
+      HTML(paste("It seems that your review number is too less for us to give your customized suggestion here. You can view other business suggestion and analysis to improve your business, make yourselves popular and get more reviews on Yelp!"))
     }
   })
   
@@ -493,7 +489,7 @@ server<-shinyServer(function(input, output) {
                  '<br/>',
                  "Enze Wang: ewang36@wisc.edu",'<br/>',
                  '<br/>',
-                 "We want to use business, review, user and tip data to give data-driven suggestion for businesses on Yelp. The data set given by our professor contains reviews before 2020 has many business in Pittsburgh, Cleveland, Madison and Urbana-Champaign. Our group aims at pizza business, we study more than 60000 reviews and 1500 businesses. We give suggestion to you on three aspects.",'<br/>',
+                 "We want to use business, review, user and tip data to give data-driven suggestion for businesses on Yelp. The data set given by our professor contains reviews before 2020 has many businesses in Pittsburgh, Cleveland, Madison and Urbana-Champaign. Our group aims at pizza business, we study more than 60000 reviews and 1500 businesses. We give suggestion to you on three aspects.",'<br/>',
                  '<br/>',
                  "1. Which factors such as offering alcohol or not, offering free WiFi or not are highly related to your business star rating. What can you do to improve your business star rating?",
                  '<br/>',

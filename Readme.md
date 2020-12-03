@@ -20,7 +20,7 @@ This code is for Yelp project, Module3, Stat 628 , 2020 Fall, University of Wisc
 
 **Shiny application:** https://ewang36.shinyapps.io/m_3_app/
 
-**Google Address for All Our Data:** https://drive.google.com/drive/folders/16EfjTT4BNjj9D6pakG6MR0Bpt2Pj3Hfi?usp=sharing
+**Google Drive Address for All Our Data:** https://drive.google.com/drive/folders/16EfjTT4BNjj9D6pakG6MR0Bpt2Pj3Hfi?usp=sharing
 
 
 
